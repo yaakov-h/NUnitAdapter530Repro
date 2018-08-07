@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net46</TargetFramework>
+    <OutputType>exe</OutputType>
+    <OutputPath>..\..\bin\Runner</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.TestPlatform" Version="15.8.0" />
+    <PackageReference Include="Microsoft.TestPlatform.TranslationLayer" Version="15.8.0" />
+  </ItemGroup>
+
+</Project>
