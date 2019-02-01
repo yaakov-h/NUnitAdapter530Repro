@@ -1,22 +1,23 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace Tests
 {
-    public class Fixture
-    {
+	public class Fixture
+	{
 		[Test]
 		public void PassingTest() => Assert.Pass();
 
 		[TestCase(null)]
 		public void PassingTestCase(object o) => Assert.Pass();
 
+		[Test]
 		[Ignore("reasons")]
 		public void IgnoredTest() => Assert.Fail();
 
 		[TestCase(null, Ignore = "because")]
 		public void IgnoredTestCase(object ignored) => Assert.Fail("This test should not be run.");
 
+		[Test]
 		[Explicit("reasons")]
 		public void ExplicitTest() => Assert.Fail();
 
