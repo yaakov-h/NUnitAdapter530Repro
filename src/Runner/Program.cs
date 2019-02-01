@@ -35,9 +35,9 @@ namespace Runner
 		{
 			"Tests.Fixture.PassingTest",
 			"Tests.Fixture.PassingTestCase(null)",
-			"Tests.Fixture.IgnoredTestCase",
+			"Tests.Fixture.IgnoredTest",
 			"Tests.Fixture.IgnoredTestCase(null)",
-			"Tests.Fixture.ExplicitTestCase",
+			"Tests.Fixture.ExplicitTest",
 			"Tests.Fixture.ExplicitTestCase(null)",
 		});
 
