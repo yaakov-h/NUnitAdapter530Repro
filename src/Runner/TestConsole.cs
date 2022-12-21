@@ -160,6 +160,7 @@ namespace Runner
             inner.EndSession();
             assemblyResolver.Dispose();
         }
+
         #endregion
 
         sealed class VSTestAssemblyResolver : IDisposable
@@ -172,7 +173,10 @@ namespace Runner
 
 			readonly string pathToVSTest;
 
-            public void Dispose() => AppDomain.CurrentDomain.AssemblyResolve -= ResolveVSTestAssembly;
+            public void Dispose()
+            {
+                AppDomain.CurrentDomain.AssemblyResolve -= ResolveVSTestAssembly;
+            }
 
             Assembly ResolveVSTestAssembly(object sender, ResolveEventArgs args)
 			{
