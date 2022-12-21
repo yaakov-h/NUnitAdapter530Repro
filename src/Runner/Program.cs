@@ -10,7 +10,7 @@ namespace Runner
 	{
 		public static async Task<int> Main(string[] args)
 		{
-			var pathToVSTest = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".nuget", "packages", "microsoft.testplatform", "15.8.0", "tools", "net451", "Common7", "IDE", "Extensions", "TestPlatform");
+			var pathToVSTest = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".nuget", "packages", "microsoft.testplatform", "17.4.1", "tools", "net462", "Common7", "IDE", "Extensions", "TestPlatform");
 			if (!Directory.Exists(pathToVSTest))
 			{
 				Console.Error.WriteLine("VSTest was not found in the current user's NuGet cache. Please run \"dotnet restore\" on this project.");
@@ -19,8 +19,8 @@ namespace Runner
 
 			var assembliesToTest = new[]
 			{
-				Path.Combine("..", "..", "Tests", "net46", "Tests.dll"),
-				Path.Combine("..", "..", "Tests", "netcoreapp2.0", "Tests.dll")
+				Path.Combine("..", "..", "Tests", "net48", "Tests.dll"),
+				Path.Combine("..", "..", "Tests", "net6.0", "Tests.dll")
 			};
 
 			foreach (var assembly in assembliesToTest)
